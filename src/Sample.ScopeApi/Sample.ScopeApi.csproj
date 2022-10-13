@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="MassTransit" Version="8.0.8-develop.614" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
 </Project>

@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddMediator(x => { x.AddConsumersFromNamespaceContaining<Consumers>(); });
+builder.Services.AddMediator(x => x.AddConsumersFromNamespaceContaining<Consumers>());
 
 var app = builder.Build();
 

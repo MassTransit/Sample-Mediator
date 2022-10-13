@@ -1,4 +1,5 @@
 using MassTransit;
+using MassTransit.Mediator;
 using Sample.SagaApi.Contracts;
 
 namespace Sample.SagaApi.StateMachines;
@@ -60,7 +61,7 @@ public static class OrderStateMachineExtensions
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
     public static EventActivityBinder<OrderState, T> RespondWithOrderStatus<T>(this EventActivityBinder<OrderState, T> binder)
-        where T : class
+        where T : class, Request<OrderStatus>
     {
         return binder.RespondAsync(context => context.Init<OrderStatus>(new
         {
